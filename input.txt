@@ -1,0 +1,8 @@
+When first released, Qt used its own paint engine and controls,
+emulating the look of the different platforms it runs on when it drew its
+widgets. This made the porting work easier because very few classes in Qt depended
+really on the target platform; however, this occasionally led to slight discrepancies where
+that emulation was imperfect. Recent versions of Qt use the native style APIs of the different platforms,
+on platforms that have a native widget set, to query metrics and draw most controls, and do not suffer from such
+issues as much. On some platforms (such as MeeGo and KDE) Qt is the native API. Some other portable graphical toolkits
+have made different design decisions; for example, wxWidgets uses the toolkits of the target platform for its implementations.
